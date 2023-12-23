@@ -7,7 +7,7 @@ import css from './ContactForm.module.css';
 const ContactForm = () => {
   const [value, setValue] = useState({
     name: '',
-    phone: '',
+    number: '',
   });
   const contacts = useSelector(selectContacts);
   const dispatch = useDispatch();
@@ -22,7 +22,7 @@ const ContactForm = () => {
       return;
     }
     dispatch(addContact(value));
-    setValue({ name: '', phone: '' });
+    setValue({ name: '', number: '' });
   };
 
   const handleChange = ({ target: { value, name } }) => {
@@ -46,12 +46,12 @@ const ContactForm = () => {
           />
         </div>
         <div className={css.contact_form_item}>
-          <label htmlFor="inputPhone">Phone</label>
+          <label htmlFor="inputNumber">Number</label>
           <input
-            name="phone"
+            name="number"
             type="tel"
-            id="inputPhone"
-            value={value.phone}
+            id="inputNumber"
+            value={value.number}
             onChange={handleChange}
             required
             pattern="\+?\d{1,4}?[ .\-\s]?\(?\d{1,3}?\)?[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,9}"

@@ -10,7 +10,7 @@ const ContactListItem = ({ contact }) => {
     <li className={css.list_item}>
       <div className={css.list_item_wrapper}>
         <p>
-          {contact.name}: {contact.phone}
+          {contact.name}: {contact.number}
         </p>
         <button
           className={css.btn}
