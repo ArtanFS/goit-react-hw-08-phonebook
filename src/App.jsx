@@ -23,7 +23,6 @@ const App = () => {
   return isRefreshing ? (
     <b>Refreshing user...</b>
   ) : (
-    // return (
     <Routes>
       <Route path="/" element={<SharedLayout />}>
         <Route index element={<HomePage />} />

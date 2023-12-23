@@ -1,19 +1,22 @@
-import { ThreeDots } from 'react-loader-spinner';
+import { Triangle } from 'react-loader-spinner';
 import css from './Loader.module.css';
+import { createPortal } from 'react-dom';
+
+const loaderRoot = document.querySelector('#loader-root');
 
 const Loader = () => {
-  return (
-    <>
-      <ThreeDots
-        wrapperClass={css.Loader}
-        height="40"
-        width="120"
-        radius="12"
-        color="#212121"
-        ariaLabel="three-dots-loading"
+  return createPortal(
+    <div className={css.Wrapper}>
+      <Triangle
         visible={true}
+        height="200"
+        width="200"
+        color="#212121"
+        ariaLabel="triangle-loading"
+        wrapperClass={css.Loader}
       />
-    </>
+    </div>,
+    loaderRoot
   );
 };
 

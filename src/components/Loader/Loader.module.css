@@ -1,5 +1,24 @@
-.Loader {
-  /* padding-top: 5px; */
-  /* padding-left: 40px; */
+.Wrapper {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
   justify-content: center;
+  /* align-items: center; */
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.Loader {
+  padding-top: 160px;
+  /* position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* background-color: aquamarine; */
 }
