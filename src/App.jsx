@@ -1,9 +1,9 @@
 import { lazy, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import SharedLayout from './Layouts/SharedLayout';
 import { useDispatch } from 'react-redux';
-import { useAuth } from 'hooks/useAuth';
+import SharedLayout from './Layouts/SharedLayout';
 import { PrivateRoute } from 'guards/PrivateRoute';
+import { useAuth } from 'hooks/useAuth';
 import { RestrictedRoute } from 'guards/RestrictedRoute';
 import { refreshUser } from 'store/auth/operations';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -63,6 +63,7 @@ const App = () => {
                 />
               }
             />
+            <Route path="*" element={<HomePage />} />
           </Route>
         </Routes>
       )}

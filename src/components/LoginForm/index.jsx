@@ -1,4 +1,4 @@
-// import * as React from 'react';
+import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -72,26 +72,32 @@ export function LoginForm() {
             onSubmit={handleSubmit}
             sx={{ mt: 1 }}
           >
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
-              autoFocus
-            />
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              autoComplete="current-password"
-            />
+            <Grid container spacing={2}>
+              <Grid item xs={12}>
+                <TextField
+                  margin="normal"
+                  required
+                  fullWidth
+                  id="email"
+                  label="Email Address"
+                  name="email"
+                  autoComplete="email"
+                  autoFocus
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  margin="normal"
+                  required
+                  fullWidth
+                  name="password"
+                  label="Password"
+                  type="password"
+                  id="password"
+                  autoComplete="current-password"
+                />
+              </Grid>
+            </Grid>
             <Button
               type="submit"
               fullWidth
@@ -100,10 +106,12 @@ export function LoginForm() {
             >
               Log In
             </Button>
-            <Grid item sx={{ mt: 1 }}>
-              <Link component={NavLink} to="/register" variant="body2">
-                Don't have an account? Register
-              </Link>
+            <Grid container justifyContent="flex-end">
+              <Grid item sx={{ mt: 1 }}>
+                <Link component={NavLink} to="/register" variant="body2">
+                  Don't have an account? Register
+                </Link>
+              </Grid>
             </Grid>
           </Box>
         </Box>

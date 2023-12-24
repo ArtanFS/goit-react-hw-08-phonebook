@@ -11,7 +11,7 @@ const Loader = () => {
         visible={true}
         height="200"
         width="200"
-        color="#212121"
+        color="#1976d2"
         ariaLabel="triangle-loading"
         wrapperClass={css.Loader}
       />

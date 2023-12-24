@@ -8,6 +8,7 @@ import Error from 'components/Error';
 import { selectError, selectIsLoading } from 'store/contacts/contactSelectors';
 import { getContacts } from 'store/contacts/operations';
 import css from 'Container.module.css';
+import { Helmet } from 'react-helmet';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -20,6 +21,9 @@ const App = () => {
 
   return (
     <div className={css.container}>
+      <Helmet>
+        <title>Phonebook</title>
+      </Helmet>
       <h1>Phonebook</h1>
       <ContactForm />
       <h2>Contacts</h2>
