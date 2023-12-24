@@ -2,10 +2,10 @@ import { lazy, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import SharedLayout from './Layouts/SharedLayout';
-import { PrivateRoute } from 'guards/PrivateRoute';
 import { useAuth } from 'hooks/useAuth';
-import { RestrictedRoute } from 'guards/RestrictedRoute';
 import { refreshUser } from 'store/auth/operations';
+import { PrivateRoute } from 'guards/PrivateRoute';
+import { RestrictedRoute } from 'guards/RestrictedRoute';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const defaultTheme = createTheme();
@@ -29,6 +29,7 @@ const App = () => {
   }, [dispatch]);
 
   return (
+    // <ThemeProvider theme={darkTheme}>
     <ThemeProvider theme={defaultTheme}>
       {isRefreshing ? (
         <b>Refreshing user...</b>

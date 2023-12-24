@@ -1,19 +1,20 @@
-import * as React from 'react';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
-import TextField from '@mui/material/TextField';
-import Link from '@mui/material/Link';
-import Paper from '@mui/material/Paper';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import Typography from '@mui/material/Typography';
+import { NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { logIn } from 'store/auth/operations';
-import { NavLink } from 'react-router-dom';
+import {
+  Avatar,
+  Box,
+  CssBaseline,
+  Paper,
+  Grid,
+  Typography,
+  TextField,
+  Button,
+  Link,
+} from '@mui/material';
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 
-export function LoginForm() {
+export default function LoginForm() {
   const dispatch = useDispatch();
 
   const handleSubmit = e => {

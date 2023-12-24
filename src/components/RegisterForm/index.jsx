@@ -1,65 +1,20 @@
 import { useDispatch } from 'react-redux';
-import { register } from 'store/auth/operations';
-import * as React from 'react';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
-import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Paper from '@mui/material/Paper';
 import { NavLink } from 'react-router-dom';
+import { register } from 'store/auth/operations';
+import {
+  Avatar,
+  Box,
+  CssBaseline,
+  Paper,
+  Grid,
+  Typography,
+  TextField,
+  Button,
+  Link,
+} from '@mui/material';
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 
-// import { register } from 'redux/auth/operations';
-// import css from './RegisterForm.module.css';
-
-export const RegisterForm1 = () => {
-  const dispatch = useDispatch();
-
-  const handleSubmit = e => {
-    e.preventDefault();
-    const form = e.currentTarget;
-    dispatch(
-      register({
-        name: form.elements.name.value,
-        email: form.elements.email.value,
-        password: form.elements.password.value,
-      })
-    );
-    form.reset();
-  };
-
-  return (
-    // <form className={css.form} onSubmit={handleSubmit} autoComplete="off">
-    <form onSubmit={handleSubmit} autoComplete="off">
-      {/* <label className={css.label}> */}
-      <label>
-        Username
-        <input type="text" name="name" />
-      </label>
-      {/* <label className={css.label}> */}
-      <label>
-        Email
-        <input type="email" name="email" />
-      </label>
-      {/* <label className={css.label}> */}
-      <label>
-        Password
-        <input type="password" name="password" />
-      </label>
-      <button type="submit">Register</button>
-    </form>
-  );
-};
-
-export function RegisterForm() {
+export default function RegisterForm() {
   const dispatch = useDispatch();
 
   const handleSubmit = e => {

@@ -9,6 +9,7 @@ import { selectError, selectIsLoading } from 'store/contacts/contactSelectors';
 import { getContacts } from 'store/contacts/operations';
 import css from 'Container.module.css';
 import { Helmet } from 'react-helmet';
+import { Typography } from '@mui/material';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -24,9 +25,10 @@ const App = () => {
       <Helmet>
         <title>Phonebook</title>
       </Helmet>
-      <h1>Phonebook</h1>
+      <Typography component="h1" variant="h4" fontWeight={500}>
+        Phonebook
+      </Typography>
       <ContactForm />
-      <h2>Contacts</h2>
       <Filter />
       {isLoading && <Loader />}
       {error && <Error err={error} />}
