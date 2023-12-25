@@ -31,7 +31,7 @@ export default function RegisterForm() {
   };
 
   return (
-    <Grid container component="main" sx={{ height: '91.9vh' }}>
+    <Grid container component="main" sx={{ height: '91vh' }}>
       <CssBaseline />
       <Grid
         item
@@ -40,8 +40,7 @@ export default function RegisterForm() {
         md={8}
         sx={
           {
-            // backgroundImage:
-            //   'url(https://source.unsplash.com/random?wallpapers)',
+            // backgroundImage: 'url(https://source.unsplash.com/random?wallpapers)',
             // backgroundRepeat: 'no-repeat',
             // backgroundColor: t =>
             //   t.palette.mode === 'light'
@@ -105,19 +104,15 @@ export default function RegisterForm() {
                   type="password"
                   id="password"
                   autoComplete="new-password"
+                  placeholder="Enter minimum 7 characters"
                 />
               </Grid>
             </Grid>
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}
-            >
+            <Button type="submit" fullWidth variant="contained" sx={{ my: 3 }}>
               Register
             </Button>
             <Grid container justifyContent="flex-end">
-              <Grid item sx={{ mt: 1 }}>
+              <Grid item>
                 <Link component={NavLink} to="/login" variant="body2">
                   Already have an account? Log in
                 </Link>

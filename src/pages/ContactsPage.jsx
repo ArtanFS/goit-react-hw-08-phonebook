@@ -7,9 +7,8 @@ import Loader from 'components/Loader';
 import Error from 'components/Error';
 import { selectError, selectIsLoading } from 'store/contacts/contactSelectors';
 import { getContacts } from 'store/contacts/operations';
-import css from 'Container.module.css';
 import { Helmet } from 'react-helmet';
-import { Typography } from '@mui/material';
+import { Container, CssBaseline } from '@mui/material';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -21,19 +20,17 @@ const App = () => {
   }, [dispatch]);
 
   return (
-    <div className={css.container}>
+    <Container component="main" maxWidth="sm">
+      <CssBaseline />
       <Helmet>
         <title>Phonebook</title>
       </Helmet>
-      <Typography component="h1" variant="h4" fontWeight={500}>
-        Phonebook
-      </Typography>
       <ContactForm />
       <Filter />
       {isLoading && <Loader />}
       {error && <Error err={error} />}
       <ContactList />
-    </div>
+    </Container>
   );
 };
 

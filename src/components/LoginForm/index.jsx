@@ -30,7 +30,7 @@ export default function LoginForm() {
   };
 
   return (
-    <Grid container component="main" sx={{ height: '91.9vh' }}>
+    <Grid container component="main" sx={{ height: '91vh' }}>
       <CssBaseline />
       <Grid
         item
@@ -99,16 +99,11 @@ export default function LoginForm() {
                 />
               </Grid>
             </Grid>
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}
-            >
+            <Button type="submit" fullWidth variant="contained" sx={{ my: 3 }}>
               Log In
             </Button>
             <Grid container justifyContent="flex-end">
-              <Grid item sx={{ mt: 1 }}>
+              <Grid item>
                 <Link component={NavLink} to="/register" variant="body2">
                   Don't have an account? Register
                 </Link>

@@ -1,17 +1,19 @@
 import { useSelector } from 'react-redux';
-import ContactListItem from '../ContactListItem';
+import ContactListItem from 'components/ContactListItem';
 import { selectVisibleContacts } from 'store/contacts/contactSelectors';
-import css from './ContactList.module.css';
+import { Box, List } from '@mui/material';
 
 const ContactList = () => {
   const contacts = useSelector(selectVisibleContacts);
 
   return (
-    <ul className={css.list}>
-      {contacts.map(el => (
-        <ContactListItem key={el.id} contact={el} />
-      ))}
-    </ul>
+    <Box>
+      <List>
+        {contacts.map(el => (
+          <ContactListItem key={el.id} contact={el} />
+        ))}
+      </List>
+    </Box>
   );
 };
 

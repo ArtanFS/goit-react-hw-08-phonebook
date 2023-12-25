@@ -7,13 +7,14 @@ import { refreshUser } from 'store/auth/operations';
 import { PrivateRoute } from 'guards/PrivateRoute';
 import { RestrictedRoute } from 'guards/RestrictedRoute';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Loader from 'components/Loader';
 
 const defaultTheme = createTheme();
-const darkTheme = createTheme({
-  palette: {
-    mode: 'dark',
-  },
-});
+// const darkTheme = createTheme({
+//   palette: {
+//     mode: 'dark',
+//   },
+// });
 
 const HomePage = lazy(() => import('./pages/HomePage'));
 const RegisterPage = lazy(() => import('./pages/RegisterPage'));
@@ -32,7 +33,7 @@ const App = () => {
     // <ThemeProvider theme={darkTheme}>
     <ThemeProvider theme={defaultTheme}>
       {isRefreshing ? (
-        <b>Refreshing user...</b>
+        <Loader />
       ) : (
         <Routes>
           <Route path="/" element={<SharedLayout />}>

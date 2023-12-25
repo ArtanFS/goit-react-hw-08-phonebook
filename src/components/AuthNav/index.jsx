@@ -1,6 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
+import { Box, Link } from '@mui/material';
 
 export default function AuthNav() {
   return (
@@ -9,12 +8,12 @@ export default function AuthNav() {
         component={NavLink}
         to="/register"
         variant="h6"
-        color="#ffffff"
-        sx={{ mx: 2 }}
+        color="inherit"
+        sx={{ mr: 2 }}
       >
         Register
       </Link>
-      <Link component={NavLink} to="/login" variant="h6" color="#ffffff">
+      <Link component={NavLink} to="/login" variant="h6" color="inherit">
         Log In
       </Link>
     </Box>

@@ -1,3 +1,4 @@
+import { Typography } from '@mui/material';
 import { Helmet } from 'react-helmet';
 
 const Home = () => {
@@ -6,7 +7,14 @@ const Home = () => {
       <Helmet>
         <title>Phonebook</title>
       </Helmet>
-      Home
+      <Typography
+        component="h1"
+        variant="h4"
+        fontWeight={500}
+        sx={{ mt: 2, textAlign: 'center' }}
+      >
+        Welcome To Your Phonebook
+      </Typography>
     </div>
   );
 };

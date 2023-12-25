@@ -3,15 +3,16 @@ import UserMenu from 'components/UserMenu';
 import AuthNav from 'components/AuthNav';
 import { useAuth } from 'hooks/useAuth';
 import { AppBar, Box, Toolbar, Typography, Link } from '@mui/material';
+import { yellow } from '@mui/material/colors';
 
 export default function LinkAppBar() {
   const { isLoggedIn } = useAuth();
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar sx={{ height: '8vh' }}>
-          <Link component={NavLink} to="/" variant="h6" color="#ffffff">
+    <Box component={'header'} sx={{ flexGrow: 1 }}>
+      <AppBar position="static" component={'div'}>
+        <Toolbar sx={{ height: '8.99vh' }}>
+          <Link component={NavLink} to="/" variant="h6" color="inherit">
             Home
           </Link>
           {isLoggedIn && (
@@ -19,7 +20,7 @@ export default function LinkAppBar() {
               component={NavLink}
               to="/contacts"
               variant="h6"
-              color="#ffffff"
+              color="inherit"
               sx={{ mx: 2 }}
             >
               Contacts

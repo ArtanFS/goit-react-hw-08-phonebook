@@ -45,7 +45,7 @@ export default function UserMenu() {
             aria-haspopup="true"
             aria-expanded={open ? 'true' : undefined}
           >
-            <Avatar sx={{ width: 32, height: 32 }}>
+            <Avatar sx={{ width: 32, height: 32, bgcolor: 'secondary.main' }}>
               {user.name[0].toUpperCase()}
             </Avatar>
           </IconButton>
@@ -87,7 +87,7 @@ export default function UserMenu() {
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >
         <MenuItem onClick={handleClose}>
-          <Avatar /> {user.name}
+          <Avatar sx={{ bgcolor: 'secondary.main' }} /> {user.name}
         </MenuItem>
         <MenuItem onClick={handleClose}>{user.email}</MenuItem>
         <Divider />
