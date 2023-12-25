@@ -3,7 +3,6 @@ import UserMenu from 'components/UserMenu';
 import AuthNav from 'components/AuthNav';
 import { useAuth } from 'hooks/useAuth';
 import { AppBar, Box, Toolbar, Typography, Link } from '@mui/material';
-import { yellow } from '@mui/material/colors';
 
 export default function LinkAppBar() {
   const { isLoggedIn } = useAuth();
